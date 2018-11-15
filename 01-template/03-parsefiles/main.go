@@ -7,17 +7,7 @@ import (
 )
 
 func main() {
-	tpl, err := template.ParseFiles("gotpl1.txt")
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	tpl, err = tpl.ParseFiles("gotpl2.txt")
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	tpl, err = tpl.ParseFiles("gotpl3.txt")
+	tpl, err := template.ParseFiles("gotpl1.txt", "gotpl2.txt", "gotpl3.txt")
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -40,6 +30,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
+	// 默认执行第一个模板
 	err = tpl.Execute(os.Stdout, nil)
 	if err != nil {
 		log.Fatalln(err)
