@@ -1,2 +1,4 @@
 # goland project settings
 .idea/
+
+.DS_Store

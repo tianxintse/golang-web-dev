@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+{{ if . }}
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Zip</th>
+            <th>Region</th>
+        </tr>
+        {{ range .}}
+        <tr>
+            <td>{{.Name}}</td>
+            <td>{{.Address}}</td>
+            <td>{{.City}}</td>
+            <td>{{.Zip}}</td>
+            <td>{{.Region}}</td>
+        </tr>
+        {{ end }}
+    </table>
+{{ end }}
+</body>
+</html>
