@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{{if .}}
+    <h3>Method: {{.Method}}</h3>
+    {{range $k, $v := .Submissions}}
+        <p>{{$k}}:</p>
+        <ul>
+            {{range $v}}
+                <li>{{.}}</li>
+            {{end}}
+        </ul>
+    {{end}}
+{{end}}
+
+<form action="/?fname=daimao&surname=hahaha" method="post">
+    <input type="text" name="fname" placeholder="first name" autofocus autocomplete="false">
+    <input type="submit" name="submit-button" value="submit">
+</form>
+</body>
+</html>

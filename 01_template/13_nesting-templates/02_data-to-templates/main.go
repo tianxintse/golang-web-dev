@@ -13,7 +13,7 @@ func init() {
 }
 
 func main() {
-	err := tpl.ExecuteTemplate(os.Stdout, "index.html", nil)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", 42)
 	if err != nil {
 		log.Fatalln(err)
 	}
